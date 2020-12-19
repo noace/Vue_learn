@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册组件</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <!-- 注册组件 -->
+    <div id="app">
+        <ol>
+            <todo-item
+                v-for="lan in languages"
+                v-bind:key="lan.id"
+                v-bind:todo="lan.text"
+            >
+            </todo-item>
+        </ol>
+    </div>
+
+    <script>
+        // 注册名为todo-item的组件, 实现父子组件通信
+        Vue.component('todo-item', {
+
+            // 定义一个名为todo的属性
+            props: ['todo'],
+            template: '<li>{{ todo }}</li>'
+        });
+
+        var app = new Vue({
+            el: '#app',
+            data: {
+                languages: [
+                    {id: 1, text: 'Java'},
+                    {id: 2, text: 'C'},
+                    {id: 3, text: 'C++'},
+                    {id: 4, text: 'C#'},
+                ]
+            }
+        });
+    </script>
+</body>
+</html>

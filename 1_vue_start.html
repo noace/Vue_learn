@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VUE learn</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <!--  引入vue,vue入门  -->
+    <!--插值表达式-->
+    <div id="app">
+        {{ message }}
+    </div>
+
+    <script>
+        var vue = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello world...'
+            }
+        });
+    </script>
+</body>
+</html>

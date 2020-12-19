@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VUE learn</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<!--  v-for  -->
+<div id="app">
+    <ol>
+        <li v-for="language in languages">
+            {{ language.lan }}
+        </li>
+    </ol>
+</div>
+
+<script>
+    var vue = new Vue({
+        el: '#app',
+        data: {
+            languages:[
+                {lan: 'Java'},
+                {lan: 'C'},
+                {lan: 'Python'},
+                {lan: 'C#'}
+            ]
+        }
+    });
+</script>
+</body>
+</html>

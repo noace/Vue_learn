@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>VUE learn</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<!--  v-bind指令  -->
+<div id="app">
+    <span v-bind:title = "message">
+        鼠标悬停几秒即可看到提示信息！
+    </span>
+</div>
+
+<script>
+    var vue = new Vue({
+        el: '#app',
+        data: {
+            message: '页面加载于' + new Date().toLocaleString()
+        }
+    });
+</script>
+</body>
+</html>
